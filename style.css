@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+::selection{
+    background: none;
+    color: none;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./img/bg.jpg);
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+.track{
+    height: 18vh;
+    width: 20vw;
+    position: absolute;
+    bottom: 0;
+    right: 170px;
+    background-image: url(./img/track.png);
+    background-size: cover;
+}
+.car{
+    height: 80px;
+    width: 300px;
+    position: absolute;
+    bottom: 50px;
+    left: 55%;
+}
+.car .myCar{
+    height: 100%;
+    width: 100%;
+}
+.tyre{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 40px;
+    top: 35px;
+}
+.rightTyre{
+    left: 191px;
+}
+.signal{
+    height: 30vh;
+    width: 6vw;
+    position: absolute;
+    right: 300px;
+    bottom: 115px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+.signal img{
+    height: 50%;
+    width:80%
+}
+.color{
+    height:44%;
+    position: absolute;
+    top: 9px;
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap:6px;
+}
+.color>div{
+    height: 22px;
+    width: 22px;
+    border-radius: 100px;
+}
+.danda{
+    background:linear-gradient(to left,rgba(0, 0, 0, 0.425),silver,rgba(0, 0, 0, 0.418));
+    height: 50%;
+    width: 17%;
+}
+.red{
+    box-shadow: inset 0px 0px 5px white;
+}
+.green{
+    box-shadow: inset 0px 0px 5px white;
+}
+.yellow{
+    box-shadow: inset 0px 0px 5px white;
+}
+
+.select{
+    padding: 1rem 1rem;
+    position: absolute;
+    right: -165px;
+    font-family: sans-serif;
+    font-weight: 600;
+    top: 30px;
+    border-radius: 0px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #999;
+    backdrop-filter: blur(10px);
+    color: white;
+    background: #00000023;
+    transition: 0.5s;
+}
+
+.select div{
+    height: 40px;
+    width:40px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: transparent;
+}
+
+.select div:nth-child(1){
+    background: red;
+}
+.select div:nth-child(2){
+    background: yellow;
+}
+.select div:nth-child(3){
+    background: green;
+}
+
+i{
+    padding: 12px;
+    background: #000;
+    position: absolute;
+    right:0;
+    top: 30px;
+    cursor: pointer;
+    color: white;
+    transition: 0.5s;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.select-tog{
+    transition: 0.5s;
+    right: 0;
+}
+.i-tog{
+    right: 163px;
+    transition: 0.5s;
+}
+#lcd{
+    height: 150px;
+    width: 350px;
+    background: #000;
+    box-shadow: inset 0px 0px 1rem white;
+    border: 1px solid rgba(255, 255, 255, 0.708);
+    position: absolute;
+    top: 170px;
+    left: 37.3%;
+    border-radius: 20px;
+    color: white;
+    font-family: sans-serif;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s;
+    text-align: center;
+}
+
+#lcd img{
+    height: 90%;
+    width: 50%;
+    filter: drop-shadow(0px 0px 1rem #555);
+}
+
+#lcd h2{
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* < =============================| All Keyframes Start Here |======================================>  */
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes car {
+    0%{
+        left: 55%;
+    }
+    100%{
+        left: 110%;
+    }
+}
+
+@keyframes oneTime {
+    0%{
+        left: 10%;
+    }
+    100%{
+        left: 55%;
+    }
+}
+
+@keyframes oneTimerotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes restart {
+    0%{
+        left: -20%;
+    }
+    100%{
+        left: 120%;
+    }
+}
